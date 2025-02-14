@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emusc</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    
+    <!-- Cabeçalho -->
+    <header>
+        <div class="logo">
+            <img src="emusc.png" alt="Logo Emusc" width="50%">
+            
+        </div>
+    </header>
+    
+    <main>
+        <!-- Seção de Login -->
+        <div class="container-login">
+            <h2>Login</h2>
+            <form id="formularioLogin">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+                
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
+                
+                <button type="submit">Entrar</button>
+            </form>
+            
+            <p>Não tem uma conta?</p>
+            <button type="button" onclick="mostrarCadastro()">Cadastre-se aqui</button>
+            
+            <p>Recupere sua senha aqui:</p>
+            <button type="button" onclick="mostrarRecuperacaoSenha()">Esqueci minha senha</button>
+        </div>
+        
+        <!-- Seção de Cadastro -->
+        <div class="container-cadastro" style="display: none;">
+            <h2>Cadastro</h2>
+            <form id="formularioCadastro">
+                <label for="novoEmail">E-mail:</label>
+                <input type="email" id="novoEmail" name="novoEmail" placeholder="Digite seu e-mail" required>
+                
+                <label for="novaSenha">Senha:</label>
+                <input type="password" id="novaSenha" name="novaSenha" placeholder="Digite sua senha" required>
+                
+                <label for="confirmarSenha">Confirmar Senha:</label>
+                <input type="password" id="confirmarSenha" name="confirmarSenha" placeholder="Confirme sua senha" required>
+                
+                <button type="submit">Cadastrar</button>
+            </form>
+            
+            <p>Já tem uma conta?</p>
+            <button type="button" onclick="mostrarLogin()">Faça login</button>
+            
+            <p id="mensagemCadastroSucesso" style="color: green; display: none;">
+                Cadastro realizado com sucesso! Faça login.
+            </p>
+        </div>
+        
+        <!-- Seção de Recuperação de Senha -->
+        <div class="container-recuperacao-senha" style="display: none;">
+            <h2>Recuperar Senha</h2>
+            <form id="formularioRecuperacaoSenha">
+                <label for="emailRecuperacao">E-mail:</label>
+                <input type="email" id="emailRecuperacao" name="emailRecuperacao" placeholder="Digite seu e-mail" required>
+                
+                <button type="submit">Enviar link de recuperação</button>
+            </form>
+        </br>
+            <button type="button" onclick="mostrarLogin()">Voltar ao login</button>
+        </div>
+        
+        <!-- Seção de Introdução ao Site -->
+        <div class="resumo">
+            <p>Este site foi criado para oferecer a você uma plataforma rica em informações sobre
+                emagrecimento, hipertrofia e bem-estar físico-mental.</p>
+        </div>
+    </main>
+    
+    <!-- Importando o JavaScript externo -->
+    <script src="script.js"></script>
+    
+</body>
+
+</html>
